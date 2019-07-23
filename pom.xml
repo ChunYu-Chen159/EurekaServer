@@ -38,13 +38,13 @@
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-actuator</artifactId>
       </dependency>
-
+<!--
 		<dependency>
 			<groupId>com.soselab</groupId>
 			<artifactId>vmamv-eureka-client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
+-->
 		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api-->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
