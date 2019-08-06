@@ -82,13 +82,13 @@
       </dependencies>
    </dependencyManagement>
 	
-	
+	<!--
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- Info page provids Build Information -->
+				 Info page provids Build Information
 				<executions>
 			        <execution>
 			            <goals>
@@ -98,12 +98,12 @@
 			    </executions>
 			</plugin>
 			
-			<!-- Info page provids Git Information -->
+			 Info page provids Git Information
 			<plugin>
 			    <groupId>pl.project13.maven</groupId>
 			    <artifactId>git-commit-id-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
-
+-->
 </project>
