@@ -43,6 +43,8 @@
 			<groupId>com.soselab</groupId>
 			<artifactId>vmamv-eureka-client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>/home/cinema/.m2/repository/com/soselab/vmamv-eureka-client/0.0.1-SNAPSHOT/vmamv-eureka-client-0.0.1-SNAPSHOT.jar</systemPath>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api-->
