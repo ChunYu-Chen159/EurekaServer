@@ -34,7 +34,6 @@ public class EurekaStateChangeListener
 	{
         event.getAppName();
         event.getServerId();
-		System.out.println(">>>>>>>>>>>>>>>Instance Renewed! : " + event);
     }
  
     @EventListener
