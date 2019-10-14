@@ -19,7 +19,7 @@ public class EurekaStateChangeListener
         //Service's disconnection event
         String appName = event.getAppName();
         String serverId = event.getServerId();
-        System.out.println(">>>>>>>>>>>>>>> Service Failed :{},already removed! : ", serverId);
+        System.out.println(">>>>>>>>>>>>>>> Service Failed : " + serverId + " , already removed!");
     }
  
     @EventListener
