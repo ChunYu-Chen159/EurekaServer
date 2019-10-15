@@ -17,10 +17,10 @@ import org.springframework.core.env.Environment;
 ###	for Cinema project, and my graduate paper QAQ	###
 #######################################################*/
 
+@PropertySource("classpath:application.properties")
 @Component
 public class EurekaStateChangeListener 
 {
-	@PropertySource("classpath:application.properties")
 	@Autowired
 	private Environment env;
 	
