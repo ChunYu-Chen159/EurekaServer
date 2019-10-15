@@ -19,8 +19,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class EurekaStateChangeListener 
 {
-	@Value("${msabot.slackroom}")
-    private String roomID;
+	//@Value("${msabot.slackroom}")
+    //private String roomID;
 	//private MSABotSender sender = new MSABotSender();
 	
 	@EventListener
