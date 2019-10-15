@@ -49,11 +49,6 @@ public class MSABotSender {
 		return false;
 	}
 
-   	 public static void main(String[] args)
-   	 {
-		send("Hello!");
-   	 }	
-
 }
 
 
