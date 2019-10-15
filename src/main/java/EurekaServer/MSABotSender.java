@@ -29,7 +29,7 @@ public class MSABotSender {
 		JSONObject obj = new JSONObject();
         obj.put("roomID", roomID);
         obj.put("appName", appName);
-		obj.put("status", status)
+		obj.put("status", status);
 		
 		String result = obj.toString();
 		
