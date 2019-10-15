@@ -30,7 +30,7 @@ public class EurekaStateChangeListener
         String appName = event.getAppName();
         String serverId = event.getServerId();
         System.out.println(">>>>>>>>>>>>>>> Service Failed : " + serverId + " , already removed!");
-		sender.send(roomID, appName, "Failed");
+		sender.send(roomID, appName.toString(), "Failed");
     }
  
     @EventListener
