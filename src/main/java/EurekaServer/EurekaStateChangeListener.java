@@ -17,7 +17,6 @@ import org.springframework.beans.factory.annotation.*;
 ###	for Cinema project, and my graduate paper QAQ	###
 #######################################################*/
 
-@PropertySource("classpath:application.properties")
 @Component
 public class EurekaStateChangeListener 
 {
