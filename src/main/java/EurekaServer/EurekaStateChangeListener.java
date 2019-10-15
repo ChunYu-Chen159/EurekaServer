@@ -8,6 +8,7 @@ import org.springframework.cloud.netflix.eureka.server.event.EurekaRegistryAvail
 import org.springframework.cloud.netflix.eureka.server.event.EurekaServerStartedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import org.springframework.core.env.Environment;
 //import EurekaServer.MSABotSender;
 
 /*#####################################################
@@ -19,8 +20,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class EurekaStateChangeListener 
 {
+	@Autowired
+	private Environment env;
+	
 	//@Value("${msabot.slackroom}")
-    private String roomID = "C9PF9PKTL";
+    private String roomID = env.getProperty("msabot.slackroom");
 	private MSABotSender sender = new MSABotSender();
 	
 	@EventListener
