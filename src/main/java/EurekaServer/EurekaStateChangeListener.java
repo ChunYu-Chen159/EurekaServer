@@ -8,11 +8,21 @@ import org.springframework.cloud.netflix.eureka.server.event.EurekaRegistryAvail
 import org.springframework.cloud.netflix.eureka.server.event.EurekaServerStartedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import EurekaServer.MSABotSender;
+
+/*#####################################################
+###	2019/10/14										###
+###	created by jimting								###
+###	for Cinema project, and my graduate paper QAQ	###
+#######################################################*/
 
 @Component
 public class EurekaStateChangeListener 
 {
-
+	@Value("${msabot.slackroom}")
+    private String roomID;
+	private MSABotSender sender = new MSABotSender();
+	
 	@EventListener
     public void listen(EurekaInstanceCanceledEvent event) 
 	{
@@ -20,6 +30,7 @@ public class EurekaStateChangeListener
         String appName = event.getAppName();
         String serverId = event.getServerId();
         System.out.println(">>>>>>>>>>>>>>> Service Failed : " + serverId + " , already removed!");
+		sender.send(roomID, appName, "Failed");
     }
  
     @EventListener
@@ -39,13 +50,15 @@ public class EurekaStateChangeListener
     @EventListener
     public void listen(EurekaRegistryAvailableEvent event) 
 	{
-		System.out.println(">>>>>>>>>>>>>>>Server Registry Start! : " + event);
+		System.out.println(">>>>>>>>>>>>>>>Server Registry Start! : " + event.getAppName());
+		sender.send(roomID, event.getAppName(), "Server Registry Start");
     }
  
     @EventListener
     public void listen(EurekaServerStartedEvent event) 
 	{
         //Server start
-		System.out.println(">>>>>>>>>>>>>>> Server Start! : " + event);
+		System.out.println(">>>>>>>>>>>>>>> Server Start! : " + event.getAppName());
+		sender.send(roomID, event.getAppName(), "Server Start");
     }
 }
