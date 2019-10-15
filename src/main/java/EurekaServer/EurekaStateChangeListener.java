@@ -20,6 +20,7 @@ import org.springframework.core.env.Environment;
 @Component
 public class EurekaStateChangeListener 
 {
+	@PropertySource("classpath:application.properties")
 	@Autowired
 	private Environment env;
 	
