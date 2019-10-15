@@ -50,7 +50,7 @@ public class EurekaStateChangeListener
     @EventListener
     public void listen(EurekaRegistryAvailableEvent event) 
 	{
-		System.out.println(">>>>>>>>>>>>>>>Server Registry Start! : " + event.getAppName());
+		System.out.println(">>>>>>>>>>>>>>>Server Registry Start! ");
 		sender.send(roomID, "Eureka Server", "Server Registry Start");
     }
  
@@ -58,7 +58,7 @@ public class EurekaStateChangeListener
     public void listen(EurekaServerStartedEvent event) 
 	{
         //Server start
-		System.out.println(">>>>>>>>>>>>>>> Server Start! : " + event.getAppName());
+		System.out.println(">>>>>>>>>>>>>>> Server Start! ");
 		sender.send(roomID, "Eureka Server", "Server Start");
     }
 }
