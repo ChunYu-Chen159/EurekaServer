@@ -25,7 +25,7 @@ public class EurekaStateChangeListener
 	@Value("${msabot.mqip}")
 	private String mqip;
 	@Value("${msabot.mqport}")
-	private String mqport;
+	private int mqport;
 	
 	private MSABotSender sender = new MSABotSender();
 	
