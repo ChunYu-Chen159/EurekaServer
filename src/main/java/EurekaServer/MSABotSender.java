@@ -20,11 +20,11 @@ public class MSABotSender {
 
 	private static final String EXCHANGE_NAME = "eurekaserver";
     
-   	public static boolean send(String roomID, String appName, String status)
+   	public static boolean send(String mqip, String mqport, String roomID, String appName, String status)
 	{
    		ConnectionFactory factory = new ConnectionFactory();
-		factory.setHost("140.121.196.23");
-		factory.setPort(4111);
+		factory.setHost(mqip);
+		factory.setPort(mqport);
 		
 		JSONObject obj = new JSONObject();
         obj.put("roomID", roomID);
