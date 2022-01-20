@@ -1,3 +1,3 @@
 # EurekaServer
 
-Our Eureka Server for the Cinema.
+Eureka Server for the Cinema S.
